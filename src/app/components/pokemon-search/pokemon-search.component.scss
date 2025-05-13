@@ -1,0 +1,32 @@
+.pokemon-search-container {
+  padding: 20px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .pokemon-result {
+    margin-top: 20px;
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 60px); /* Ajusta la altura según tu posible header */
+}
+
+.left-side {
+  flex: 1;
+  padding-right: 20px;
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+.right-side {
+  flex: 1;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-side {
+    padding-right: 0;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 150px;
+    }
+  }
+}

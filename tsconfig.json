@@ -1,0 +1,26 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022", // Una base más antigua
+    "module": "ES2022", // Un formato de módulo compatible
+    "lib": [
+      "ES2015",
+      "ES2022",
+      "dom"
+    ],
+    "allowSyntheticDefaultImports":true
+  },
+  "angularCompilerOptions": {
+    "enableI18nSupport": false
+  }
+}

@@ -1,0 +1,39 @@
+.pokemon-card {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #f01515;
+  min-width: 100px;
+  min-height: 100px;  
+  padding: 15px;
+  text-align: center;
+  display: flex; /* Añadimos flexbox para controlar el tamaño de la imagen */
+  flex-direction: column; /* Alineamos los elementos verticalmente */
+  align-items: center; /* Centramos los elementos horizontalmente */
+}
+
+img {
+  min-width: 30px;
+  min-height: 30px;  
+  max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+  height: auto;    /* Mantiene la proporción de aspecto */
+  max-height: 120px; /* Establece una altura máxima para evitar que se desborden */
+  margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+h2 {
+  margin-top: 0; /* Reducimos el margen superior */
+  font-size: 1.2em; /* Reducimos un poco el tamaño del texto */
+}
+
+.types {
+  margin-top: 5px;
+
+  .type {
+    display: inline-block;
+    padding: 5px 8px; /* Reducimos un poco el padding */
+    margin: 0 3px; /* Reducimos un poco el margen */
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 0.8em; /* Reducimos el tamaño de la fuente */
+  }
+}

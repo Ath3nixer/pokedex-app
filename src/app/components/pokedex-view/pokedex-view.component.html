@@ -1,0 +1,23 @@
+<div class="pokedex-container">
+  <h2>Lista de Pokémon</h2>
+
+  <div class="filter-generation">
+    <label for="generation">Filtrar por Generación:</label>
+    <select id="generation" [(ngModel)]="selectedGeneration" (change)="onGenerationChange()">
+      <option value="all">Todas las Generaciones</option>
+      <option *ngFor="let generation of generations" [value]="generation.url">{{ generation.name | titlecase }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="loading" class="loading-message">Cargando Pokémon...</div>
+
+  <div *ngIf="!loading" class="pokemon-grid">
+    <app-pokemon-card *ngFor="let pokemonDetail of pokemonDetails" [pokemon]="pokemonDetail"></app-pokemon-card>
+  </div>
+
+  <div class="pagination">
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Anterior</button>
+    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Siguiente</button>
+  </div>
+</div>

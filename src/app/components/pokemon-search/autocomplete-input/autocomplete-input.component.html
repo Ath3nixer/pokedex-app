@@ -1,0 +1,13 @@
+<div class="autocomplete-container">
+  <input
+    type="text"
+    [formControl]="searchTerm" 
+    (blur)="onBlur()"
+    placeholder="Buscar Pokémon..."
+  />
+  <ul *ngIf="showSuggestions && suggestions.length > 0" class="suggestions">
+    <li *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion.name)">
+      {{ suggestion.name }}
+    </li>
+  </ul>
+</div>

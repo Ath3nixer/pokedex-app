@@ -1,0 +1,17 @@
+<div class="pokemon-search-container">
+  <h2>Buscar Pokémon</h2>
+  <app-autocomplete-input
+    [minLength]="minAutocompleteLength"
+    (search)="searchPokemon($event)"
+  ></app-autocomplete-input>
+  <button (click)="searchPokemon(searchInputValue)">Buscar</button>
+
+  <div *ngIf="selectedPokemon" class="pokemon-result">
+    <h3>Resultado:</h3>
+    <app-pokemon-card [pokemon]="selectedPokemon"></app-pokemon-card>
+  </div>
+
+  <div *ngIf="selectedPokemon === null && searchInputValue !== ''" class="error-message">
+    No se encontró ningún Pokémon con el nombre "{{ searchInputValue }}".
+  </div>
+</div>
